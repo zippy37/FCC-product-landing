@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(240,240,250);
+  font-family: "Century Schoolbook", sans-serif;
+}
+
+
+#page-wrapper {
+  position: relative;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  min-height: 75px;   background-color: rgb(240,240,250);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+.logo {
+  width: 60vw;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 850px) {
+
+  .logo {
+    width: 55vw;
+  }
+}
+
+@media (max-width: 650px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .logo {
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.logo > img {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 10px;
+}
+
+@media (max-width: 650px) {
+  .logo > img {
+    margin: 0 auto;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+nav {
+  font-family: "Verdana";
+  word-wrap: break-word;
+}
+
+
+nav > ul {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav li {
+    padding: 10px;
+  }
+
+nav li:hover {
+  color:white;
+background-color: rgb(50,40,50);  
+}
+
+@media (max-width: 650px) {
+  nav {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+  nav li {
+    padding: 0  0 15px 0;
+  }
+}
+
+@media (max-width: 650px) {
+  nav > ul {
+    flex-direction: column;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.title {
+  font-family:"Century Schoolbook";
+  font-weight: normal;
+  font-size: 30px;
+}
+
+#hero input[type="email"] {
+  max-width: 330px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 5px;
+  justify-content: center;
+  text-align: center;
+}
+
+#hero input[type="submit"] {
+  font-weight: bold;
+  background-color: rgb(50, 40, 50);
+  height: 30px;
+  max-width: 80px;
+  margin: 15px 0;
+  width: 100%;
+  color: white;
+}
+
+#hero input[type="submit"]:hover {
+  background-color: rgb(200, 170, 200);
+  color: white;
+  transition: background-color 1s;
+}
+
+#hero {
+  max-width: 400px;
+  margin: 120px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 140px;
+}
+
+#hero > h1 {
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+@media (max-width: 650px) {
+  #hero {
+    margin-top: 250px;
+  }
+}
+
+
+.grid {
+  display: flex;
+  align-items: center;
+justify-content: center;
+  padding: 10px;
+  z-index: 1;
+}
+
+@media (max-width: 650px) {
+  .grid {
+    flex-direction: column;
+  }
+}
+
+#materials h1, #demonstration-video h1, #price-and-comparison h1 {
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: underline;
+  text-align: center;
+  margin: 20px;
+  padding-bottom: 20px;
+}
+
+#materials h2 {
+  display: inline;
+  margin: 10px;
+}
+
+#materials p {
+  text-align: center;
+}
+
+.med-img {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 50%;
+  min-width: 300px;
+  max-height: 200px;
+}
+
+#materials p {
+  margin: 30px 0;
+}
+
+
+#demonstration-video > iframe {
+  display: flex;
+  max-width: 600px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#price-and-comparison {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.paper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 15px;
+  border: 1px solid rgb(70,40,80);
+  border-radius: 5px;
+  background: rgb(240,230,250);
+}
+
+.paper > .type {
+  background-color: rgb(100,80,110);
+  color: white;
+  padding: 15px 0;
+  width: 100%;
+  font-weight: 700;
+}
+
+.paper > h3 {
+  margin-top: 15px;
+}
+
+.paper > ol {
+  margin: 15px 0;
+}
+
+.paper > ol > li {
+  padding: 5px 0;
+}
+
+.paper > button {
+  font-weight: bold;
+  background-color: rgb(50, 40, 50);
+  height: 30px;
+  max-width: 80px;
+  margin: 15px 0;
+  width: 100%;
+  color: white;
+  align-items: start;
+}
+
+.paper > button:hover {
+  background-color: rgb(200, 170, 200);
+  transition: background-color 1s;
+}
+
+
+@media (max-width: 900px) {
+  #price-and-comparison {
+    flex-direction: column;
+  }
+  .paper {
+    max-width: 350px;
+    width: 100%;
+    margin: 10px auto;
+  }
+}
+
+footer {
+  margin-top: 30px;
+  background-color: rgb(240,230,250);
+  padding: 10px;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer > ul > li {
+  padding: 0 10px;
+}
+
+footer > span {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: rgb(10,0,10);
+}
